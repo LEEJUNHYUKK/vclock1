@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Alarm</title>
+    <link rel="stylesheet" type="text/css" href="alarm_modal.css">
+</head>
+<body>
+    
+    <h2>Edit Alarm</h2>
+    <label for="alarm-title">Title</label>
+    <input type="text" id="alarm-title">
+
+    <div class="time-selection">
+        <label for="hours">Hours</label>
+        <select id="hours">
+
+        </select>
+
+        <label for="minutes">Minutes</label>
+        <select id="minutes">
+
+        </select>
+    </div>
+
+    <div class="sound-selection">
+        <label for="sound">Sound</label>
+        <span id="selected-sound"></span> 
+        <input type="file" id="sound-file" accept=".mp3" style="display: none;"> 
+        <button id="select-sound">Choose Sound</button>
+    </div>
+
+    <button id="cancel-alarm">Cancel</button>
+    <button id="start-alarm">Start</button>
+
+    <script src="alarm_modal.js"></script>
+</body>
+</html>

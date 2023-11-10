@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My VClock</title>
+    <link rel="stylesheet" type="text/css" href="vclock.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="time">
+            <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+            <span id="ampm"></span>
+        </div>
+        <div class="date" id="date-display"></div>
+        <div class="alarm">
+            <button id="set-alarm">Set Alarm</button>
+        </div>
+    </div>
+    <audio id="alarm-sound" src="alarm.mp3" loop></audio>
+    <script src="vclock.js"></script>
+</body>
+</html>

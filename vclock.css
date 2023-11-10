@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.clock {
+    width: 300px;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+    font-size: 24px;
+}
+
+.alarm button {
+    padding: 5px 10px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
