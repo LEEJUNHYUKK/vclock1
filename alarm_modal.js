@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const selectSoundButton = document.getElementById("select-sound");
-    const selectedSoundInput = document.getElementById("selected-sound");
+    const selectedSoundSpan = document.getElementById("selected-sound");
     const soundFileInput = document.getElementById("sound-file");
 
     const hoursSelect = document.getElementById("hours");
     const minutesSelect = document.getElementById("minutes");
 
-    const cancelAlarmButton = document.getElementById("cancel-alarm");
     const startAlarmButton = document.getElementById("start-alarm");
+    const cancelAlarmButton = document.getElementById("cancel-alarm");
+    const alarmSound = document.getElementById("alarm-sound");
+
+    let selectedSoundPath = null;
 
     for (let i = 1; i <= 12; i++) {
         hoursSelect.add(new Option(`${i} AM`, i));
-    }
-    for (let i = 1; i <= 12; i++) {
         hoursSelect.add(new Option(`${i} PM`, i + 12));
     }
 
@@ -21,16 +22,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     selectSoundButton.addEventListener("click", function () {
-        soundFileInput.click(); 
+        soundFileInput.click();
     });
 
-    cancelAlarmButton.addEventListener("click", function () {
-        
-        window.close(); 
+    soundFileInput.addEventListener("change", function () {
+        selectedSoundSpan.textContent = soundFileInput.files[0].name;
+        selectedSoundPath = URL.createObjectURL(soundFileInput.files[0]);
     });
 
     startAlarmButton.addEventListener("click", function () {
+        const selectedHour = parseInt(hoursSelect.value);
+        const selectedMinute = parseInt(minutesSelect.value);
 
-        window.close(); 
+        const alarmDate = new Date();
+        alarmDate.setHours(selectedHour);
+        alarmDate.setMinutes(selectedMinute);
+        alarmDate.setSeconds(0);
+
+        if (selectedSoundPath) {
+            alarmSound.src = selectedSoundPath;
+            alarmSound.play();
+
+            
+            window.close();
+        } else {
+            alert("노래를 선택해주세요");
+        }
+    });
+
+    cancelAlarmButton.addEventListener("click", function () {
+        window.close();
     });
 });
