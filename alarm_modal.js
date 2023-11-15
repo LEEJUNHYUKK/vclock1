@@ -40,13 +40,22 @@ document.addEventListener("DOMContentLoaded", function () {
         alarmDate.setSeconds(0);
 
         if (selectedSoundPath) {
-            alarmSound.src = selectedSoundPath;
-            alarmSound.play();
+            // 웹 워커 생성 및 알람 정보 전송
+            const worker = new Worker("alarm_worker.js");
+            worker.postMessage({
+                alarmTime: alarmDate.getTime(),
+                selectedSoundPath: selectedSoundPath
+            });
 
-            
+            // 부모 창으로 메시지 전송
+            window.opener.postMessage("알람이 저장되었습니다!", "*");
+            // 수정: 저장된 알람 시간을 메인 창에 전달
+            window.opener.postMessage({ type: "alarmSaved", time: alarmDate.toString() }, "*");
+
+            // modal 창 닫기
             window.close();
         } else {
-            alert("노래를 선택해주세요");
+            alert("알람시간과 노래를 선택해주세요.");
         }
     });
 
