@@ -23,3 +23,8 @@ body {
     border: none;
     cursor: pointer;
 }
+
+#stopwatch {
+    font-size: 2em;
+    margin-top: 20px;
+}

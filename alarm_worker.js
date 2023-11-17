@@ -1,18 +1,17 @@
 self.addEventListener("message", function (event) {
     const data = event.data;
+    const alarmTime = data.alarmTime;
+    const selectedSoundPath = data.selectedSoundPath;
 
-    if (data.type === "setAlarm") {
-        // 알람 시간 및 선택된 소리 경로
-        const alarmTime = data.alarmTime;
-        const selectedSoundPath = data.selectedSoundPath;
+    const currentTime = new Date().getTime();
 
-        // 현재 시간
-        const currentTime = new Date().getTime();
+    if (currentTime >= alarmTime) {
+        // 오디오 재생에 Howler.js 사용
+        const sound = new Howl({
+            src: [selectedSoundPath]
+        });
 
-        // 알람 시간에 도달하면 알람 재생
-        if (currentTime >= alarmTime) {
-            const alarmSound = new Audio(selectedSoundPath);
-            alarmSound.play();
-        }
+        // 사운드 재생
+        sound.play();
     }
 });

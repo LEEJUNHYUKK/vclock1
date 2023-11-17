@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My VClock</title>
+    <title>JunHyuk VClock</title>
     <link rel="stylesheet" type="text/css" href="vclock.css">
 </head>
 <body>
@@ -15,7 +15,14 @@
         <div class="alarm">
             <button id="set-alarm">Set Alarm</button>
         </div>
+        <div class="stopwatch">
+            <div id="stopwatch">00:00</div>
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="stopStopwatch()">Stop</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
     </div>
     <script src="vclock.js"></script>
+    <script src="stopwatch.js"></script>
 </body>
 </html>
