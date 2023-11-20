@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 1초 간격으로 현재 시간 업데이트
     setInterval(updateClock, 1000);
 
-    // 2초 간격으로 알람 확인
+    // 1.5초 간격으로 알람 확인
     setInterval(checkAlarm, 1500);
 });
 // 오디오 재생 함수

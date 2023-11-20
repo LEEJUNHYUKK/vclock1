@@ -1,3 +1,3 @@
 # vclock1
 
-<Make Alarm Timer>
+<Make alarm timer and stop watch>
