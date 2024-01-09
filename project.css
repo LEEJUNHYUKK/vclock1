@@ -1,0 +1,159 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  header {
+    text-align: center;
+    padding: 1em;
+    background-color: #f3f3f3;
+  }
+  
+  nav {
+    background: #333;
+    overflow: hidden;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    display: inline-block;
+  }
+  
+  nav ul li a:hover {
+    background-color: #777;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+  
+  article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .comment {
+    margin-top: 10px;
+  }
+  
+  .comment-area {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #4cae4c;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #f3f3f3;
+  }
+  
+  nav .login-form label,
+  nav .login-form input,
+  nav .login-form .login-button,
+  nav .login-form .register-button {
+    color: white; 
+    margin-bottom: 5px; 
+  }
+  
+  nav .login-form input {
+    background: transparent; 
+    border: 1px solid white; 
+    margin-right: 0; 
+  }
+  
+  nav .login-form .login-button,
+  nav .login-form .register-button {
+    background-color: #5bc0de; 
+    border: 1px solid #46b8da; 
+    color: white; 
+    margin-top: 0; 
+    margin-right: 5px; 
+  }
+  
+  nav .login-form .login-button:hover,
+  nav .login-form .register-button:hover {
+    background-color: #31b0d5; 
+  }
+  
+  
+  nav .login-form,
+  nav ul {
+    display: inline-block;
+    vertical-align: middle; 
+    margin-right: 10px; 
+  }
+  
+  nav ul li a:hover {
+    background-color: #777; 
+  }
+  
+  
+  button {
+    padding: 10px 15px;
+    background-color: #5bc0de; 
+    color: white; 
+    border: 1px solid #46b8da; 
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #31b0d5; 
+  }
+
+
+.comment-container {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+  }
+  
+  .comment-text {
+    flex-grow: 1; 
+  }
+  
+  
+  .delete-comment {
+    padding: 5px 10px; 
+    margin-left: 10px; 
+    background-color: #ff6347; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+  }
+  
+  .delete-comment:hover {
+    background-color: #ff4500; 
+  }

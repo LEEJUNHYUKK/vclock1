@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Site</title>
+<link rel="stylesheet" href="project.css"> <script src="project.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>자유 게시판</h1>
+  </header>
+
+  <nav>
+    <div class="login-form">
+        <form id="login">
+          <div class="form-group">
+            <label for="username">아이디:</label>
+            <input type="text" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password">
+          </div>
+          <div class="form-group action-buttons">
+            <button type="submit" class="login-button">로그인</button>
+            <button type="button" class="register-button">회원가입</button>
+          </div>
+        </form>
+      </div>
+      
+    <ul>
+      <li><a href="#">유머</a></li>
+      <li><a href="#">스포츠</a></li>
+      <li><a href="#">게임</a></li>
+      <li><a href="#">음식</a></li>
+      <li><a href="#">여행</a></li>
+      <li><a href="#">갤러리</a></li>
+      <li><a href="#">쇼핑</a></li>
+      <li><a href="#">웹툰</a></li>
+      <li><a href="#">동물</a></li>
+      <li><a href="#">미스테리</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <article>
+      <h2>게시글 제목이 보여질 예정입니다</h2>
+      <p>게시글 내용이 보여질 예정입니다</p>
+      <div class="comment">
+        <h3>댓글</h3>
+        <div id="comment-list"></div>
+        <textarea class="comment-area" id="comment-input" placeholder="댓글을 입력하세요..."></textarea>
+        <button onclick="submitComment()">댓글 달기</button>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <p>&copy; Copyright jun huyk</p>
+  </footer>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
